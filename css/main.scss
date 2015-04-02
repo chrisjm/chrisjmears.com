@@ -1,12 +1,574 @@
 ---
 ---
 
+//
+// Imports
+//
+
+@import "syntax-highlighting";
+
+
+//
+// Variables
+//
+
 $color-primary: #93af6d;
 $color-secondary: #4298b5;
 $color-secondary-dark: #db5f39;
+$color-nav-active: #1a242f;
 $color-portfolio-hover: rgba(147, 175, 109, 0.9);
+$white: #fff;
 
 $font-family-sans-serif: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+
+
+//
+// Bootstrap Overwrites
+//
+
+body {
+	color: $color-secondary;
+}
+a {
+	color: $color-primary;
+	&.thumbnail {
+		&:hover {
+			border-color: $color-primary;
+		}
+		&:focus {
+			border-color: $color-primary;
+		}
+		&.active {
+			border-color: $color-primary;
+		}
+	}
+	&.list-group-item.active>.badge {
+		color: $color-secondary;
+	}
+}
+.text-primary {
+  color: $color-secondary;
+}
+.has-success .input-group-addon {
+  background-color: $color-primary;
+}
+.bg-primary {
+	background-color: $color-secondary;
+}
+.bg-success {
+	background-color: $color-secondary;
+}
+.table>thead>tr {
+	&.success>td {
+		background-color: $color-primary;
+	}
+	&.success>th {
+		background-color: $color-primary;
+	}
+}
+.table>tbody>tr {
+	&.success>td {
+		background-color: $color-primary;
+	}
+	&.success>th {
+		background-color: $color-primary;
+	}
+}
+.table>tfoot>tr {
+	&.success>td {
+		background-color: $color-primary;
+	}
+	&.success>th {
+		background-color: $color-primary;
+	}
+}
+legend {
+	color: $color-secondary;
+}
+output {
+	color: $color-secondary;
+}
+.form-control {
+	color: $color-secondary;
+	&:focus {
+		border-color: $color-secondary;
+	}
+}
+.btn-primary {
+	background-color: $color-secondary;
+	border-color: $color-secondary;
+	&.disabled {
+		background-color: $color-secondary;
+		border-color: $color-secondary;
+		&:hover {
+			background-color: $color-secondary;
+			border-color: $color-secondary;
+		}
+		&:focus {
+			background-color: $color-secondary;
+			border-color: $color-secondary;
+		}
+		&:active {
+			background-color: $color-secondary;
+			border-color: $color-secondary;
+		}
+		&.active {
+			background-color: $color-secondary;
+			border-color: $color-secondary;
+		}
+	}
+	.badge {
+		color: $color-secondary;
+	}
+}
+.btn-primary[disabled] {
+	background-color: $color-secondary;
+	border-color: $color-secondary;
+	&:hover {
+		background-color: $color-secondary;
+		border-color: $color-secondary;
+	}
+	&:focus {
+		background-color: $color-secondary;
+		border-color: $color-secondary;
+	}
+	&:active {
+		background-color: $color-secondary;
+		border-color: $color-secondary;
+	}
+	&.active {
+		background-color: $color-secondary;
+		border-color: $color-secondary;
+	}
+}
+fieldset[disabled] {
+	.btn-primary {
+		background-color: $color-secondary;
+		border-color: $color-secondary;
+		&:hover {
+			background-color: $color-secondary;
+			border-color: $color-secondary;
+		}
+		&:focus {
+			background-color: $color-secondary;
+			border-color: $color-secondary;
+		}
+		&:active {
+			background-color: $color-secondary;
+			border-color: $color-secondary;
+		}
+		&.active {
+			background-color: $color-secondary;
+			border-color: $color-secondary;
+		}
+	}
+	.btn-success {
+		background-color: $color-primary;
+		border-color: $color-primary;
+		&:hover {
+			background-color: $color-primary;
+			border-color: $color-primary;
+		}
+		&:focus {
+			background-color: $color-primary;
+			border-color: $color-primary;
+		}
+		&:active {
+			background-color: $color-primary;
+			border-color: $color-primary;
+		}
+		&.active {
+			background-color: $color-primary;
+			border-color: $color-primary;
+		}
+	}
+}
+.btn-success {
+	background-color: $color-primary;
+	border-color: $color-primary;
+	&.disabled {
+		background-color: $color-primary;
+		border-color: $color-primary;
+		&:hover {
+			background-color: $color-primary;
+			border-color: $color-primary;
+		}
+		&:focus {
+			background-color: $color-primary;
+			border-color: $color-primary;
+		}
+		&:active {
+			background-color: $color-primary;
+			border-color: $color-primary;
+		}
+		&.active {
+			background-color: $color-primary;
+			border-color: $color-primary;
+		}
+	}
+	.badge {
+		color: $color-primary;
+	}
+}
+.btn-success[disabled] {
+	background-color: $color-primary;
+	border-color: $color-primary;
+	&:hover {
+		background-color: $color-primary;
+		border-color: $color-primary;
+	}
+	&:focus {
+		background-color: $color-primary;
+		border-color: $color-primary;
+	}
+	&:active {
+		background-color: $color-primary;
+		border-color: $color-primary;
+	}
+	&.active {
+		background-color: $color-primary;
+		border-color: $color-primary;
+	}
+}
+.btn-link {
+	color: $color-primary;
+	&:hover {
+		color: $color-primary;
+	}
+	&:focus {
+		color: $color-primary;
+	}
+}
+.dropdown-menu>li>a {
+	&:hover {
+		background-color: $color-secondary;
+	}
+	&:focus {
+		background-color: $color-secondary;
+	}
+}
+.input-group-addon {
+	color: $color-secondary;
+}
+.navbar-default {
+	background-color: $color-secondary;
+	.navbar-brand {
+		color: $white;
+		&:hover {
+			color: $color-primary;
+		}
+		&:focus {
+			color: $color-primary;
+		}
+	}
+  .navbar-toggle {
+    border-color: #1a242f;
+
+    .icon-bar {
+      background-color: $white;
+    }
+
+    &:hover,
+    &:focus{
+      background-color:#1a242f;
+    }
+  }
+  .navbar-collapse,
+  .navbar-form {
+    border-color:transparent;
+  }
+	.navbar-nav>li>a {
+		color: $white;
+		&:hover {
+			color: $color-primary;
+		}
+		&:focus {
+			color: $color-primary;
+		}
+	}
+	.btn-link {
+		&:hover {
+			color: $color-primary;
+		}
+		&:focus {
+			color: $color-primary;
+		}
+	}
+	.badge {
+		color: $color-secondary;
+	}
+	.navbar-nav>.active>a {
+		color: $white;
+		background-color: $color-nav-active;
+		&:hover {
+			color: $white;
+			background-color: $color-nav-active;
+		}
+		&:focus {
+			color: $white;
+			background-color: $color-nav-active;
+		}
+	}
+	.navbar-nav .open .dropdown-menu>li>a {
+		&:hover {
+			color: $color-primary;
+		}
+		&:focus {
+			color: $color-primary;
+		}
+	}
+	.navbar-link:hover {
+		color: $color-primary;
+	}
+}
+.navbar-inverse {
+	background-color: $color-primary;
+	.navbar-brand {
+		&:hover {
+			color: $color-secondary;
+		}
+		&:focus {
+			color: $color-secondary;
+		}
+	}
+	.navbar-nav>li>a {
+		&:hover {
+			color: $color-secondary;
+		}
+		&:focus {
+			color: $color-secondary;
+		}
+	}
+	.btn-link {
+		&:hover {
+			color: $color-secondary;
+		}
+		&:focus {
+			color: $color-secondary;
+		}
+	}
+	.badge {
+		color: $color-primary;
+	}
+	.navbar-nav .open .dropdown-menu>li>a {
+		&:hover {
+			color: $color-secondary;
+		}
+		&:focus {
+			color: $color-secondary;
+		}
+	}
+	.navbar-link:hover {
+		color: $color-secondary;
+	}
+}
+.pagination>li>a {
+	background-color: $color-primary;
+}
+.pagination>li>span {
+	background-color: $color-primary;
+}
+.pager {
+	li>a {
+		background-color: $color-primary;
+	}
+	li>span {
+		background-color: $color-primary;
+	}
+	.disabled>a {
+		background-color: $color-primary;
+		&:hover {
+			background-color: $color-primary;
+		}
+		&:focus {
+			background-color: $color-primary;
+		}
+	}
+	.disabled>span {
+		background-color: $color-primary;
+	}
+}
+.label-primary {
+	background-color: $color-secondary;
+}
+.label-success {
+	background-color: $color-primary;
+}
+.badge {
+	background-color: $color-secondary;
+}
+.alert-success {
+	background-color: $color-primary;
+	border-color: $color-primary;
+}
+.progress-bar {
+	background-color: $color-secondary;
+}
+.progress-bar-success {
+	background-color: $color-primary;
+}
+.list-group-item-success {
+	background-color: $color-primary;
+}
+.panel-primary {
+	border-color: $color-secondary;
+}
+.panel-primary {
+	&>.panel-heading {
+		background-color: $color-secondary;
+		border-color: $color-secondary;
+		.badge {
+			color: $color-secondary;
+		}
+	}
+	&>.panel-heading+.panel-collapse>.panel-body {
+		border-top-color: $color-secondary;
+	}
+	&>.panel-footer+.panel-collapse>.panel-body {
+		border-bottom-color: $color-secondary;
+	}
+}
+.panel-success {
+	border-color: $color-primary;
+}
+.panel-success {
+	&>.panel-heading {
+		background-color: $color-primary;
+		border-color: $color-primary;
+		.badge {
+			color: $color-primary;
+		}
+	}
+	&>.panel-heading+.panel-collapse>.panel-body {
+		border-top-color: $color-primary;
+	}
+	&>.panel-footer+.panel-collapse>.panel-body {
+		border-bottom-color: $color-primary;
+	}
+}
+.text-primary {
+	color: $color-secondary;
+	&:hover {
+		color: $color-secondary;
+	}
+}
+.text-success {
+	color: $color-primary;
+	&:hover {
+		color: $color-primary;
+	}
+}
+.has-success {
+	.help-block {
+		color: $color-primary;
+	}
+	.control-label {
+		color: $color-primary;
+	}
+	.radio {
+		color: $color-primary;
+	}
+	.checkbox {
+		color: $color-primary;
+	}
+	.radio-inline {
+		color: $color-primary;
+	}
+	.checkbox-inline {
+		color: $color-primary;
+	}
+	.form-control-feedback {
+		color: $color-primary;
+	}
+	.form-control {
+		border: 2px solid $color-primary;
+		&:focus {
+			border: 2px solid $color-primary;
+		}
+	}
+	.input-group-addon {
+		border-color: $color-primary;
+	}
+}
+.table>thead>tr>td.success {
+	background-color: $color-primary;
+}
+.table>tbody>tr>td.success {
+	background-color: $color-primary;
+}
+.table>tfoot>tr>td.success {
+	background-color: $color-primary;
+}
+.table>thead>tr>th.success {
+	background-color: $color-primary;
+}
+.table>tbody>tr>th.success {
+	background-color: $color-primary;
+}
+.table>tfoot>tr>th.success {
+	background-color: $color-primary;
+}
+.dropdown-menu>.active>a {
+	background-color: $color-secondary;
+	&:hover {
+		background-color: $color-secondary;
+	}
+	&:focus {
+		background-color: $color-secondary;
+	}
+}
+.nav .open>a {
+	border-color: $color-primary;
+	&:hover {
+		border-color: $color-primary;
+	}
+	&:focus {
+		border-color: $color-primary;
+	}
+}
+.nav-tabs>li.active>a {
+	color: $color-secondary;
+	&:hover {
+		color: $color-secondary;
+	}
+	&:focus {
+		color: $color-secondary;
+	}
+}
+.nav-pills>li.active>a {
+	background-color: $color-secondary;
+	&:hover {
+		background-color: $color-secondary;
+	}
+	&:focus {
+		background-color: $color-secondary;
+	}
+}
+.nav-pills>.active>a>.badge {
+	color: $color-secondary;
+}
+.thumbnail .caption {
+	color: $color-secondary;
+}
+.list-group-item.active {
+	background-color: $color-secondary;
+	border-color: $color-secondary;
+	&:hover {
+		background-color: $color-secondary;
+		border-color: $color-secondary;
+	}
+	&:focus {
+		background-color: $color-secondary;
+		border-color: $color-secondary;
+	}
+}
+.panel-default>.panel-heading {
+	color: $color-secondary;
+	.badge {
+		background-color: $color-secondary;
+	}
+}
+
 
 //
 // Top-level
