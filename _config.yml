@@ -1,0 +1,50 @@
+# Site settings
+title: Chris J Mears
+email: chris@chrisjmears.com
+url: http://chrisjmears.com
+description: "Full-stack web developer. Technology strategist."
+
+# Contact form: comment the line below if you want to stick with the default PHP contact form
+# contact: static
+
+collections:
+- portfolio
+
+# Color settings (hex-codes without the leading hash-tag)
+color:
+  primary: 93af6d #18bc9c #80B3FF
+  secondary: 4298b5 #2c3e50 #FD6E8A
+  secondary-dark: db5f39 #233140 #A2122F
+
+# Footer settings
+footer:
+  copyright: CJM Consulting, LLC
+  location: Location
+  social: Around the Web
+  credits: Colophon
+
+# Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
+social:
+  - title: twitter
+    url: http://twitter.com/chrisjm
+  - title: linkedin
+    url: http://linkedin.com/in/chrisjm80
+  - title: github
+    url: http://github.com/chrisjm
+  - title: instagram
+    url: http://instagram.com/chrisjm
+  - title: google-plus
+    url: https://plus.google.com/108252158124794508477
+
+# Postal address (add as many lines as necessary)
+address:
+  - line: Cincinnati, OH
+
+# Credits content
+credits: 'Built with <a href="http://www.jekyllrb.com/">Jekyll</a>.<br>Design inspired by the <a href="http://jeromelachaud.github.io/freelancer-theme/">Freelancer theme</a>.'
+
+# Build settings
+markdown: kramdown
+permalink: /:year/:month/:title/
+sass:
+  style: :compressed

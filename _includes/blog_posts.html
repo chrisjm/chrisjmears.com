@@ -1,0 +1,25 @@
+
+<!-- Portfolio Grid Section -->
+<section id="blog">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h2>Blog</h2>
+        <hr class="star-primary">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <ul class="blog-list">
+          {% for post in site.posts %}
+            <li class="blog-post">
+              <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+              <div class="post-excerpt">{{ post.excerpt }}</div>
+              <time class="post-date" datetime="{{ post.date }}">{{ post.date | date: "%b %-d, %Y" }}</time>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
