@@ -666,6 +666,11 @@ header {
     padding-bottom: 50px;
   }
 
+  .profile-img {
+    max-width: 250px;
+    border-radius: 50%;
+  }
+
   .intro-text {
     .name {
       display: block;
