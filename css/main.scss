@@ -861,7 +861,7 @@ section {
     transition: top 0.3s ease, opacity 0.3s ease;
   }
 
-  &::not(:first-child) {
+  &:not(:first-child) {
     padding-left: 14px;
     border-left: 1px solid #eee;
   }
