@@ -1,10 +1,10 @@
 ---
 layout: default
-modal-id: 2
+modal-id: 6
 img: almanac-beer.jpg
 alt: Almanac Beer
 project-date: December 2013
-client: Almanac Beer  
+client: Almanac Beer
 service: Wordpress Custom Development (theme, plugin, widget)
 technology: PHP, HTML/CSS, JavaScript (jQuery)
 designer: Damian Fagan

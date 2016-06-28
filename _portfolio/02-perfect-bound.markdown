@@ -1,10 +1,10 @@
 ---
 layout: default
-modal-id: 6
+modal-id: 2
 img: perfect-bound.jpg
 alt: Perfect Bound
 project-date: 2010
-client: Perfect Bound  
+client: Perfect Bound
 service: Wordpress Custom Development (theme, plugin, widget)
 technology: PHP, HTML/CSS, JavaScript (jQuery)
 designer: Spitfiregirl Design

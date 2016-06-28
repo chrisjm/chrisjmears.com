@@ -1,6 +1,6 @@
 ---
 layout: default
-modal-id: 7
+modal-id: 1
 img: wine-institute.jpg
 alt: Wine Institute
 project-date: 2008

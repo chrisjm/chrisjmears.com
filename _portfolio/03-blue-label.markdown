@@ -1,10 +1,10 @@
 ---
 layout: default
-modal-id: 5
+modal-id: 3
 img: blue-label.jpg
 alt: Blue Label
 project-date: 2010
-client: Blue Label  
+client: Blue Label
 service: Wordpress Custom Development (theme, plugin, widget)
 technology: PHP, HTML/CSS, Javascript (jQuery)
 designer: Spitfiregirl Design
