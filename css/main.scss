@@ -254,6 +254,7 @@ fieldset[disabled] {
 	background-color: $color-secondary;
 	.navbar-brand {
 		color: $white;
+        text-shadow: black 1px 1px 5px;
 		&:hover {
 			color: $color-primary;
 		}
@@ -279,7 +280,8 @@ fieldset[disabled] {
   }
 	.navbar-nav>li>a {
 		color: $white;
-		&:hover {
+		text-shadow: black 1px 1px 5px;
+        &:hover {
 			color: $color-primary;
 		}
 		&:focus {
@@ -669,6 +671,11 @@ header {
   .profile-img {
     max-width: 250px;
     border-radius: 50%;
+    transition: all 0.25s ease-in-out;
+
+    &:hover {
+        box-shadow: black 0 0 50px;
+    }
   }
 
   .intro-text {
@@ -683,6 +690,10 @@ header {
     .skills {
       font-size: 1.25em;
       font-weight: 300;
+    }
+
+    .name, .skills {
+        text-shadow: black 1px 1px 5px;
     }
   }
 }
