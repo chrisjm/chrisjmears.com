@@ -20,7 +20,7 @@ $name = $_POST['name'];
 $message = $_POST['message'];
 
 // Create the email and send the message
-$to = 'chris@chrisjmears.com';
+$to = 'chris.mears@gmail.com';
 $email_subject = "Website Contact Form: $name";
 $email_body = "You have received a new message from your website contact form.\n\n"."Name: $name\n\nEmail: $email_address\n\nMessage:\n$message";
 $headers = "From: noreply@chrisjmears.com\n";
