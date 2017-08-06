@@ -18,7 +18,7 @@ color:
 
 # Footer settings
 footer:
-  copyright: CJM Consulting, LLC
+  copyright: Wandering Leaf Studios, LLC
   location: Location
   social: Around the Web
   credits: Colophon
@@ -38,7 +38,7 @@ social:
 
 # Postal address (add as many lines as necessary)
 address:
-  - line: Cincinnati, OH
+  - line: San Diego, CA
 
 # Credits content
 credits: 'Built with <a href="http://www.jekyllrb.com/">Jekyll</a>.<br>Design inspired by the <a href="http://jeromelachaud.github.io/freelancer-theme/">Freelancer theme</a>.'
