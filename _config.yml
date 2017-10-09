@@ -2,13 +2,13 @@
 title: Chris J Mears
 email: chris@chrisjmears.com
 url: http://chrisjmears.com
-description: "Full-stack web developer. Technology strategist. <a href=\"/housesitter\">Housesitter</a>."
-
-# Contact form: comment the line below if you want to stick with the default PHP contact form
-# contact: static
+description: >
+  <a href="#about">Full Stack Web Developer</a>. 
+  <a href="https://wanderingleafstudios.com">Entrepreneur</a>.
+  <a href="/housesitter">Housesitter</a>.
 
 collections:
-- portfolio
+  - portfolio
 
 # Color settings (hex-codes without the leading hash-tag)
 color:
@@ -48,3 +48,5 @@ markdown: kramdown
 permalink: /:year/:month/:title/
 sass:
   style: :compressed
+exclude:
+  - housesitter
