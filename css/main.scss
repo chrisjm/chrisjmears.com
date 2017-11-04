@@ -664,8 +664,8 @@ header {
   }
 
   .container {
-    padding-top: 100px;
-    padding-bottom: 50px;
+    padding-top: 75px;
+    padding-bottom: 25px;
   }
 
   .profile-img {
@@ -679,7 +679,9 @@ header {
   }
 
   .intro-text {
-    .name {
+		margin-bottom: 25px;
+
+		.name {
       display: block;
       text-transform: uppercase;
       font-family: $font-family-sans-serif;
@@ -827,7 +829,7 @@ section {
 		color: #555;
 		margin-bottom: 20px;
 	}
-	
+
 	img {
 		margin: 5px 20px;
 	}
@@ -1078,8 +1080,8 @@ form .row:first-child .floating-label-form-group {
 
 @media(min-width:768px) {
   header .container {
-    padding-top: 200px;
-    padding-bottom: 100px;
+    padding-top: 150px;
+    padding-bottom: 50px;
   }
 
   header .intro-text {
