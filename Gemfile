@@ -1,1 +1,5 @@
-gem 'jekyll', '~> 2.5.0'
+source 'https://rubygems.org'
+
+ruby '2.4.0'
+
+gem 'jekyll'
