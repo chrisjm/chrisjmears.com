@@ -9,7 +9,10 @@
     </div>
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2">
-        <form name="contact" id="contactForm" action="thank-you" data-netlify="true">
+        <form name="contact" id="contactForm" action="thank-you" data-netlify="true" netlify-honeypot="jerkbot-field">
+          <div class="hidden">
+            <label>For Bot Eyes Only: <input name="jerkbot-field"></label>
+          </div>
           <div class="row control-group">
             <div class="form-group col-xs-12 floating-label-form-group controls">
               <label>Name</label>
