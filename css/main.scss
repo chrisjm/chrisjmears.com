@@ -18,6 +18,7 @@ $color-secondary-dark: #db5f39;
 $color-nav-active: #1a242f;
 $color-portfolio-hover: rgba(147, 175, 109, 0.9);
 $white: #fff;
+$dark-grey: #555;
 
 $font-family-sans-serif: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
 
@@ -729,6 +730,10 @@ footer {
 section {
   padding: 100px 0;
 
+	&.page-content {
+		padding: 100px 0 50px 0;
+	}
+
   &.success {
     color: #fff;
     background: $color-primary;
@@ -1054,6 +1059,20 @@ form .row:first-child .floating-label-form-group {
     margin: 0;
     padding: 0;
   }
+}
+
+//
+// Pages
+//
+
+.page-title {
+	color: $color-secondary;
+	margin-top: 50px;
+}
+
+.page-content,
+.page-excerpt {
+  color: $dark-grey;
 }
 
 //
