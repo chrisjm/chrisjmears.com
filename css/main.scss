@@ -600,7 +600,7 @@ a {
   }
 }
 
-.success a {
+.success a:not(.btn) {
   &,
   &:hover,
   &:focus,
@@ -1085,7 +1085,7 @@ form .row:first-child .floating-label-form-group {
   }
 
   .book-cover {
-    margin: 0 auto;
+    margin: 20px auto;
   }
 }
 
