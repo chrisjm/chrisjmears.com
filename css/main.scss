@@ -29,6 +29,7 @@ $font-family-sans-serif: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
 
 body {
 	color: $color-secondary;
+	font-size: 20px;
 }
 a {
 	color: $color-primary;
@@ -578,15 +579,13 @@ fieldset[disabled] {
 //
 
 body {
-  overflow-x: hidden;
+	overflow-x: hidden;
 }
 
 p {
-  font-size: 20px;
-
-  .small {
-    font-size: 16px;
-  }
+  font-size: 1em; /* 20px */
+  line-height: 1.5000em; /* 30px */
+  margin: 0 0 1.5000em 0;
 }
 
 a {
@@ -614,6 +613,35 @@ h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
   font-family: $font-family-sans-serif;
   font-weight: 700;
+}
+
+h1 {
+	font-size: 1.5em; /* 30px */
+  line-height: 1em; /* 30px */
+	margin: 1em 0;
+}
+
+h2 {
+  font-size: 1.4em; /* 28px */
+  line-height: 1.0714em; /* 30px */
+	margin: 1.0714em 0;
+
+	body.index & {
+		font-size: 2em;
+		margin: 0;
+	}
+}
+
+h3 {
+  font-size: 1.3em; /* 26px */
+  line-height: 1.1538em; /* 30px */
+	margin: 1.1538em 0;
+}
+
+h4 {
+  font-size: 1.2em; /* 24px */
+  line-height: 1.25em; /* 30px */
+	margin: 1.25em 0;
 }
 
 hr.star-light,
@@ -739,11 +767,6 @@ section {
     color: #fff;
     background: $color-primary;
   }
-
-  h2 {
-    margin: 0;
-    font-size: 3em;
-  }
 }
 
 //
@@ -752,7 +775,8 @@ section {
 
 .navbar {
   text-transform: uppercase;
-  font-family: $font-family-sans-serif;
+	font-family: $font-family-sans-serif;
+	font-size: 0.6em;
   font-weight: 700;
 
   a:focus {
@@ -1073,7 +1097,23 @@ form .row:first-child .floating-label-form-group {
 
 .page-content,
 .page-excerpt {
-  color: $dark-grey;
+	color: $dark-grey;
+	
+	h1, h2, h3, h4, h5 { 
+		color: $color-secondary; 
+	}
+
+	h1 { 
+		font-size: 2.5em; 
+		text-align: center;
+	}
+}
+
+.page-roadmapping {
+	ul,
+	ol {
+		font-size: 20px;
+	}
 }
 
 //
@@ -1081,10 +1121,6 @@ form .row:first-child .floating-label-form-group {
 //
 
 #publications {
-  h2 {
-    font-size: 2.5em;
-  }
-
   .book-cover {
     margin: 20px auto;
   }
