@@ -2,12 +2,11 @@
 title: Chris J Mears
 email: chris@chrisjmears.com
 url: http://chrisjmears.com
-description: Full Stack Web Developer. Entrepreneur. CodeMentor. Housesitter.
+description: Full Stack Web Developer. CodeMentor. Technical Advisor for Non-Technical Founders.
 description_html: >
   <a href="#about">Full Stack Web Developer</a>.
-  <a href="https://wanderingleafstudios.com">Entrepreneur</a>.
-  <a href="https://www.codementor.io/chrisjm">CodeMentor</a>.
-  <a href="/housesitter">Housesitter</a>.
+  <a href="https://www.codementor.io/chrisjm">CodeMentor</a>.<br>
+  <a href="/roadmapping/">Technical Advisor for Non-Technical Founders</a>.
 
 collections:
   - portfolio
