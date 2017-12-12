@@ -1189,5 +1189,12 @@ form .row:first-child .floating-label-form-group {
     &.first {
       padding-top: 75px;
     }
-  }
+	}
+
+	.page-content,
+	.page-excerpt {
+		h1 {
+			font-size: 2em;
+		}
+	}
 }
