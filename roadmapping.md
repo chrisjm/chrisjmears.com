@@ -35,7 +35,7 @@ A Roadmapping Session is a series of conversations you and I (and perhaps your t
 
 ## Preparing for a Roadmapping Session
 
-A Roadmapping Session typically lasts between 2 and 4 hours. 
+A Roadmapping Session typically lasts between 2 and 4 hours.
 
 Other than having that block of time set aside, here are a few things you should prepare:
 
@@ -46,7 +46,9 @@ Other than having that block of time set aside, here are a few things you should
 
 ## Let's Get Started!
 
-Apply for your Roadmapping Session here. The price is $1,500.
+The price is $1,500.
+
+<a href="https://docs.google.com/forms/d/e/1FAIpQLSeYrTHY9GYe6ql80hSIGTYPxxAS2kLbEiu_fmjfZX6fIKLo6w/viewform" class="btn btn-lg btn-primary">Apply for your Roadmapping Session</a>
 
 ### 100% Money-Back Guarantee
 
@@ -85,5 +87,7 @@ Similar to my answer about being nervous about sharing information with me: if I
 
 ### How much will my project cost? How long will my project take?
 ¯\\\_(ツ)\_/¯ that's what the Roadmapping Session will help determine.
+
+<a href="https://docs.google.com/forms/d/e/1FAIpQLSeYrTHY9GYe6ql80hSIGTYPxxAS2kLbEiu_fmjfZX6fIKLo6w/viewform" class="btn btn-lg btn-primary">Apply for your Roadmapping Session</a>
 
 Have questions? No problem. Shoot me an email at [me@chrisjmears.com](mailto:me@chrisjmears.com)!
