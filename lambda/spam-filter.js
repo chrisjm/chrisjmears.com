@@ -1,174 +1,55 @@
-(function(e, a) { for(var i in a) e[i] = a[i]; }(exports, /******/ (function(modules) { // webpackBootstrap
-/******/ 	// The module cache
-/******/ 	var installedModules = {};
-/******/
-/******/ 	// The require function
-/******/ 	function __webpack_require__(moduleId) {
-/******/
-/******/ 		// Check if module is in cache
-/******/ 		if(installedModules[moduleId]) {
-/******/ 			return installedModules[moduleId].exports;
-/******/ 		}
-/******/ 		// Create a new module (and put it into the cache)
-/******/ 		var module = installedModules[moduleId] = {
-/******/ 			i: moduleId,
-/******/ 			l: false,
-/******/ 			exports: {}
-/******/ 		};
-/******/
-/******/ 		// Execute the module function
-/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
-/******/
-/******/ 		// Flag the module as loaded
-/******/ 		module.l = true;
-/******/
-/******/ 		// Return the exports of the module
-/******/ 		return module.exports;
-/******/ 	}
-/******/
-/******/
-/******/ 	// expose the modules object (__webpack_modules__)
-/******/ 	__webpack_require__.m = modules;
-/******/
-/******/ 	// expose the module cache
-/******/ 	__webpack_require__.c = installedModules;
-/******/
-/******/ 	// define getter function for harmony exports
-/******/ 	__webpack_require__.d = function(exports, name, getter) {
-/******/ 		if(!__webpack_require__.o(exports, name)) {
-/******/ 			Object.defineProperty(exports, name, {
-/******/ 				configurable: false,
-/******/ 				enumerable: true,
-/******/ 				get: getter
-/******/ 			});
-/******/ 		}
-/******/ 	};
-/******/
-/******/ 	// getDefaultExport function for compatibility with non-harmony modules
-/******/ 	__webpack_require__.n = function(module) {
-/******/ 		var getter = module && module.__esModule ?
-/******/ 			function getDefault() { return module['default']; } :
-/******/ 			function getModuleExports() { return module; };
-/******/ 		__webpack_require__.d(getter, 'a', getter);
-/******/ 		return getter;
-/******/ 	};
-/******/
-/******/ 	// Object.prototype.hasOwnProperty.call
-/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
-/******/
-/******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "";
-/******/
-/******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 0);
-/******/ })
-/************************************************************************/
-/******/ ([
-/* 0 */
-/***/ (function(module, exports, __webpack_require__) {
+exports.handler = function(event, context, callback) {
+  console.log(event)
 
-"use strict";
+  const nodemailer = require('nodemailer')
 
-
-(function (e, a) {
-  for (var i in a) {
-    e[i] = a[i];
+  try {
+    var body = JSON.parse(event.body)
   }
-})(exports, /******/function (modules) {
-  // webpackBootstrap
-  /******/ // The module cache
-  /******/var installedModules = {};
-  /******/
-  /******/ // The require function
-  /******/function __webpack_require__(moduleId) {
-    /******/
-    /******/ // Check if module is in cache
-    /******/if (installedModules[moduleId]) {
-      /******/return installedModules[moduleId].exports;
-      /******/
-    }
-    /******/ // Create a new module (and put it into the cache)
-    /******/var module = installedModules[moduleId] = {
-      /******/i: moduleId,
-      /******/l: false,
-      /******/exports: {}
-      /******/ };
-    /******/
-    /******/ // Execute the module function
-    /******/modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
-    /******/
-    /******/ // Flag the module as loaded
-    /******/module.l = true;
-    /******/
-    /******/ // Return the exports of the module
-    /******/return module.exports;
-    /******/
+  catch (e) {
+    console.log(e)
+    callback(
+      e, // Error Object
+      {
+        statusCode: 400,
+        body: 'Invalid JSON'
+      }
+    )
+    return
   }
-  /******/
-  /******/
-  /******/ // expose the modules object (__webpack_modules__)
-  /******/__webpack_require__.m = modules;
-  /******/
-  /******/ // expose the module cache
-  /******/__webpack_require__.c = installedModules;
-  /******/
-  /******/ // define getter function for harmony exports
-  /******/__webpack_require__.d = function (exports, name, getter) {
-    /******/if (!__webpack_require__.o(exports, name)) {
-      /******/Object.defineProperty(exports, name, {
-        /******/configurable: false,
-        /******/enumerable: true,
-        /******/get: getter
-        /******/ });
-      /******/
-    }
-    /******/
-  };
-  /******/
-  /******/ // getDefaultExport function for compatibility with non-harmony modules
-  /******/__webpack_require__.n = function (module) {
-    /******/var getter = module && module.__esModule ?
-    /******/function getDefault() {
-      return module['default'];
-    } :
-    /******/function getModuleExports() {
-      return module;
-    };
-    /******/__webpack_require__.d(getter, 'a', getter);
-    /******/return getter;
-    /******/
-  };
-  /******/
-  /******/ // Object.prototype.hasOwnProperty.call
-  /******/__webpack_require__.o = function (object, property) {
-    return Object.prototype.hasOwnProperty.call(object, property);
-  };
-  /******/
-  /******/ // __webpack_public_path__
-  /******/__webpack_require__.p = "";
-  /******/
-  /******/ // Load entry module and return exports
-  /******/return __webpack_require__(__webpack_require__.s = 0);
-  /******/
-}(
-/************************************************************************/
-/******/[
-/* 0 */
-/***/function (module, exports, __webpack_require__) {
 
-  "use strict";
+  if ( !body.data.name || !body.data.message ) {
+    // Return error, but notify like all is fine and dandy
+    callback(
+      'Required fields not defined',
+      {
+        statusCode: 200,
+        body: 'OK'
+      }
+    )
+    return
+  }
 
-  exports.handler = function (event, context, callback) {
-    console.log(event);
-    callback(null, {
+  let transporter = nodemailer.createTransport({
+    sendmail: true,
+    newline: 'unix'
+  });
+  transporter.sendMail({
+    from: body.data.email,
+    to: 'chris.mears@gmail.com',
+    subject: '[chrisjmears] Contact Form Message',
+    text: body.data.message
+  }, (err, info) => {
+    console.log(info.envelope);
+    console.log(info.messageId);
+  });
+
+  // Good to go
+  callback(
+    null,
+    {
       statusCode: 200,
-      body: JSON.stringify(event)
-    });
-  };
-
-  /***/
-}]
-/******/));
-
-/***/ })
-/******/ ])));
+      body: 'OK'
+    }
+  )
+}
