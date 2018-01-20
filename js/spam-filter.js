@@ -1,55 +1,66 @@
 exports.handler = function(event, context, callback) {
-  console.log(event)
-
-  const nodemailer = require('nodemailer')
-
   try {
     var body = JSON.parse(event.body)
   }
   catch (e) {
+    console.log(event)
     console.log(e)
+
     callback(
       e, // Error Object
       {
         statusCode: 400,
-        body: 'Invalid JSON'
+        body: '[ERROR] Invalid JSON'
       }
     )
     return
   }
 
-  if ( !body.data.name || !body.data.message ) {
-    // Return error, but notify like all is fine and dandy
+  if ( !body.data.name ||
+       !body.data.message )
+  {
     callback(
-      'Required fields not defined',
+      null,
       {
         statusCode: 200,
-        body: 'OK'
+        body: '[SPAM DETECTED] Required fields not defined.'
       }
     )
     return
   }
 
-  let transporter = nodemailer.createTransport({
-    sendmail: true,
-    newline: 'unix'
-  });
-  transporter.sendMail({
-    from: body.data.email,
-    to: 'chris.mears@gmail.com',
-    subject: '[chrisjmears] Contact Form Message',
-    text: body.data.message
-  }, (err, info) => {
-    console.log(info.envelope);
-    console.log(info.messageId);
-  });
+  const URL = require('url')
+  const https = require('https')
 
-  // Good to go
+  const webhook_url = URL.parse(process.env.ZAPIER_CONTACT_FORM_WEBHOOK)
+  // const webhook_url = URL.parse('https://chrisjmears.com/test')
+
+  const options = {
+    hostname: webhook_url.hostname,
+    path: webhook_url.pathname,
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' }
+  }
+
+  const req = https.request(options, function(res) {
+    console.log('Status: ' + res.statusCode);
+    console.log('Headers: ' + JSON.stringify(res.headers));
+    res.setEncoding('utf8');
+    res.on('data', function (body) {
+      console.log('Body: ' + body);
+    });
+  });
+  req.on('error', function(e) {
+    console.log('[ERROR] Problem with request: ' + e.message);
+  });
+  req.write(JSON.stringify(body));
+  req.end();
+
   callback(
     null,
     {
       statusCode: 200,
-      body: 'OK'
+      body: `[SUCCESS] Sending webhook to ${webhook_url.format()}`
     }
   )
 }
