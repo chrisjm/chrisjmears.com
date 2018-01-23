@@ -1,40 +1,45 @@
+// Simple Contact Form Spam Filter
 exports.handler = function(event, context, callback) {
+  // 1. Parse the form
   try {
-    var body = JSON.parse(event.body)
+    const body = JSON.parse(event.body)
   }
   catch (e) {
     console.log(event)
-    console.log(e)
-
     callback(
-      e, // Error Object
+      e.message,
       {
         statusCode: 400,
-        body: '[ERROR] Invalid JSON'
+        body: `[ERROR] Invalid JSON - ${e.message}`
       }
     )
     return
   }
 
+  // 2. Filter
   if ( !body.data.name ||
        !body.data.message )
   {
+    const errorMessage = '[SPAM DETECTED] Required fields not defined.'
+    console.log(errorMessage)
     callback(
       null,
       {
         statusCode: 200,
-        body: '[SPAM DETECTED] Required fields not defined.'
+        body: errorMessage
       }
     )
     return
   }
 
+  // 3. Forward data to webhook (ie, send email)
+
   const URL = require('url')
   const https = require('https')
 
-  const webhook_url = URL.parse(process.env.ZAPIER_CONTACT_FORM_WEBHOOK)
+  // TODO: Lazy testing. Replace with `dotenv`
   // const webhook_url = URL.parse('https://chrisjmears.com/test')
-
+  const webhook_url = URL.parse(process.env.ZAPIER_CONTACT_FORM_WEBHOOK)
   const options = {
     hostname: webhook_url.hostname,
     path: webhook_url.pathname,
@@ -42,19 +47,34 @@ exports.handler = function(event, context, callback) {
     headers: { 'Content-Type': 'application/json' }
   }
 
+  // Set up webhook request
   const req = https.request(options, function(res) {
-    console.log('Status: ' + res.statusCode);
-    console.log('Headers: ' + JSON.stringify(res.headers));
+    console.log(`Status: ${res.statusCode}`);
+    console.log(`Headers: ${JSON.stringify(res.headers)}`)
     res.setEncoding('utf8');
+
+    // Log data
     res.on('data', function (body) {
-      console.log('Body: ' + body);
-    });
-  });
+      console.log(`Body: ${body}`);
+    })
+  })
+
+  // Handle webhook request error
   req.on('error', function(e) {
-    console.log('[ERROR] Problem with request: ' + e.message);
-  });
-  req.write(JSON.stringify(body));
-  req.end();
+    const errorMessage = `[ERROR] Problem with request: ${e.message}`
+    console.log(errorMessage)
+
+    callback(
+      e.message,
+      {
+        statusCode: 400,
+        body: errorMessage
+      }
+    )
+  })
+
+  // Send form data to webhook request and end request
+  req.end(JSON.stringify(body))
 
   callback(
     null,
