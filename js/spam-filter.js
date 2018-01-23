@@ -2,7 +2,8 @@
 exports.handler = function(event, context, callback) {
   // 1. Parse the form
   try {
-    const body = JSON.parse(event.body)
+    // NB: Using `var` since `const` is block-scoped
+    var body = JSON.parse(event.body)
   }
   catch (e) {
     console.log(event)
