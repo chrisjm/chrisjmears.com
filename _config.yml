@@ -2,11 +2,8 @@
 title: Chris J Mears
 email: chris@chrisjmears.com
 url: http://chrisjmears.com
-description: Full Stack Web Developer. CodeMentor. Technical Advisor for Non-Technical Founders.
-description_html: >
-  <a href="#about">Full Stack Web Developer</a>.
-  <a href="https://www.codementor.io/chrisjm">CodeMentor</a>.<br>
-  <a href="/roadmapping/">Technical Advisor for Non-Technical Founders</a>.
+description: I help creative teams and entrepreneurs with all things tech.
+description_html: I help creative teams and entrepreneurs with all things tech.
 
 collections:
   - portfolio
@@ -32,10 +29,6 @@ social:
     url: http://linkedin.com/in/chrisjm80
   - title: github
     url: http://github.com/chrisjm
-  - title: instagram
-    url: http://instagram.com/chrisjm
-  - title: google-plus
-    url: https://plus.google.com/108252158124794508477
 
 # Postal address (add as many lines as necessary)
 address:
