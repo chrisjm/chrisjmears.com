@@ -1,21 +1,24 @@
-
-<!-- Blog Section -->
-<section id="blog">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-12 text-center">
-        <h2>Blog</h2>
-        <hr class="star-primary">
+<section class="bg-white" id="blog-posts">
+  <div class="container mx-auto py-12 px-10">
+    <div class="content">
+      <div class="mb-6">
+        <h2 class="text-4xl">Blog</h2>
       </div>
-    </div>
-    <div class="row">
-      <div class="col-lg-12 text-center">
-        <ul class="blog-list">
-          {% for post in site.posts %}
-            <li class="blog-post">
-              <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
-              <div class="post-excerpt">{{ post.excerpt }}</div>
-              <time class="post-date" datetime="{{ post.date }}">{{ post.date | date: "%b %-d, %Y" }}</time>
+      <div class="">
+        <ul class="blog-list list-reset">
+          {% for post in site.posts, limit: 2 %}
+            <li class="blog-post mb-5 leading-normal">
+              <h3 class="text-2xl mb-1">
+                <a href="{{ post.url }}" class="text-black hover:text-grey-darker">
+                  {{ post.title }}
+                </a>
+              </h3>
+              <time class="post-date mb-2 block text-sm text-grey-darker" datetime="{{ post.date }}">
+                {{ post.date | date: "%b %-d, %Y" }}
+              </time>
+              <div class="post-excerpt text-lg">
+                {{ post.excerpt }}
+              </div>
             </li>
           {% endfor %}
         </ul>

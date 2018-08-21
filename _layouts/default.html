@@ -1,22 +1,19 @@
 <!DOCTYPE html>
 <html>
     {% include head.html %}
-    <body id="page-top" class="index">
-    {% include nav.html %}
-    {% include header.html %}
-    {% include work.html %}
-    {% include about.html %}
-    {% include blog_posts.html %}
-    {% include publications.html %}
-
-    {% if site.contact == "static" %}
-    {% include contact_static.html %}
-    {% else %}
-    {% include contact.html %}
-    {% endif %}
-
-    {% include footer.html %}
-    {% include modals.html %}
-    {% include js.html %}
+    <body>
+        {% include header.html %}
+        {% include hero.html %}
+        {% include problems.html %}
+        {% include solutions.html %}
+        {% include why_work_with_me.html %}
+        {% include testimonials.html %}
+        {% include blog_posts.html %}
+        {% include how_i_work.html %}
+        {% include about.html %}
+        {% include newsletter_form.html %}
+        {% include contact_form.html %}
+        {% include footer.html %}
+        {% include js.html %}
     </body>
 </html>

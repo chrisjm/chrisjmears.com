@@ -1,0 +1,42 @@
+<section class="bg-white" id="contact">
+  <div class="container mx-auto py-12 px-10">
+    <div class="content">
+      <div class="mb-6">
+        <h2 class="text-4xl">Contact me</h2>
+      </div>
+      <div class="flex flex-col md:flex-row items-center">
+        <div class="md:max-w-md md:mx-auto">
+          <form class="md:px-8 pt-6 pb-8" name="contact" method="POST" netlify netlify-honeypot="url">
+            <p class="mb-4">
+              I want to hear from you. All I need is a little bit of information and then let's start a conversation and collaboration.
+            </p>
+            <div class="mb-4">
+              <label class="block text-sm font-bold mb-2" for="name">
+                Name
+              </label>
+              <input class="shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker leading-tight focus:outline-none focus:shadow-outline" id="name" name="name" type="text" placeholder="Your Name">
+            </div>
+            <div class="mb-6">
+              <label class="block text-sm font-bold mb-2" for="email">
+                Email
+              </label>
+              <input class="shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker leading-tight focus:outline-none focus:shadow-outline" id="email" name="email" type="email" placeholder="you@email.com">
+            </div>
+            <div class="mb-6">
+              <label class="block text-sm font-bold mb-2" for="message">
+                Message
+              </label>
+              <textarea class="shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker leading-tight focus:outline-none focus:shadow-outline" id="message" name="message" placeholder="Your message"></textarea>
+            </div>
+            <div class="hidden"><input type="text" name="url"></div>
+            <div class="flex items-center justify-between">
+              <button class="bg-green hover:bg-green-dark text-white font-semibold py-2 px-4 rounded shadow hover:shadow-none border-2 border-green-dark" type="submit">
+                Send Message
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,7 +1,7 @@
 # Site settings
 title: Chris J Mears
 email: chris@chrisjmears.com
-url: http://chrisjmears.com
+url: https://chrisjmears.com
 description: I help creative teams and entrepreneurs with all things tech.
 description_html: I help creative teams and entrepreneurs with all things tech.
 
@@ -24,21 +24,29 @@ footer:
 # Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
 social:
   - title: twitter
-    url: http://twitter.com/chrisjm
+    url: https://twitter.com/chrisjm
   - title: linkedin
-    url: http://linkedin.com/in/chrisjm80
+    url: https://linkedin.com/in/chrisjm80
   - title: github
-    url: http://github.com/chrisjm
+    url: https://github.com/chrisjm
 
 # Postal address (add as many lines as necessary)
 address:
   - line: San Diego, CA
 
 # Credits content
-credits: 'Built with <a href="http://www.jekyllrb.com/">Jekyll</a>.<br>Design inspired by the <a href="http://jeromelachaud.github.io/freelancer-theme/">Freelancer theme</a>.'
+credits: 'Built with <a href="https://www.jekyllrb.com/">Jekyll</a>.<br>Design inspired by the <a href="https://jeromelachaud.github.io/freelancer-theme/">Freelancer theme</a>.'
 
 # Build settings
 markdown: kramdown
 permalink: /:year/:month/:title/
 sass:
   style: :compressed
+
+defaults:
+  -
+    scope:
+      path: "_posts"
+      type: posts
+    values:
+      is_post: true
