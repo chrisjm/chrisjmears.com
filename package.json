@@ -1,5 +1,6 @@
 {
-  "dependencies": {
-    "netlify-lambda": "^0.2.0"
-  }
+  "description": "Chris J Mears Website",
+  "repository": "https://github.com/chrisjm/chrisjmears.com",
+  "license": "MIT",
+  "dependencies": {}
 }
