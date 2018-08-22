@@ -14,6 +14,9 @@ social:
   - title: github
     url: https://github.com/chrisjm
 
+plugins:
+  - jekyll-sitemap
+
 # Build settings
 markdown: kramdown
 permalink: /:year/:month/:title/
