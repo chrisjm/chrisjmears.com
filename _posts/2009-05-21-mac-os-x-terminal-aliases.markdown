@@ -15,7 +15,7 @@ Here's a list of aliases I've collected over the times searching the Internet (n
 
 To be put in ~/.bash_profile:
 
-
+<div class="overflow-x-scroll">
 {% highlight bash %}
 alias ls='ls -aFhlG'
 alias ll='ls -l'
@@ -25,6 +25,7 @@ alias ...='cd ../..'
 alias bake='/opt/local/apache2/htdocs/cake/cake/console/cake bake'
 alias cake='cd /opt/local/apache2/htdocs/cake'
 {% endhighlight %}
+</div>
 
 
 If anyone wants more detailed explanation of any or all of these, or if you'd like to know what in the bejesus I'm even talking about, post a comment.
