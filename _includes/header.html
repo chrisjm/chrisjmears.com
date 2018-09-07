@@ -1,7 +1,7 @@
 <!-- Header -->
 {% assign header_bg_color = '' %}
 {% assign header_link_color = 'text-black hover:text-grey-darker' %}
-{% if page.is_post %}
+{% if page.layout != 'default' %}
   {% assign header_bg_color = 'bg-blue text-white' %}
   {% assign header_link_color = 'text-white hover:text-blue-lighter text-shadow' %}
 {% endif %}
