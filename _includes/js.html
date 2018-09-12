@@ -29,3 +29,9 @@
     ga('send', 'event', eventCategory, eventAction, eventLabel);
   }
 </script>
+
+{% if page.layout == 'post' %}
+<!-- Shareaholic -->
+<script type="text/javascript" data-cfasync="false" src="//apps.shareaholic.com/assets/pub/shareaholic.js" data-shr-siteid="cd3f980665c2d582ab83fcb86fbe3c53" async="async"></script>
+<!-- END Shareaholic -->
+{% endif %}
