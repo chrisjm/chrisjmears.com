@@ -1,0 +1,19 @@
+[[redirects]]
+  from = "/2009/02/setting-themes-for-terminal-in-mac-os-x/"
+  to = "/blog/setting-themes-for-terminal-in-mac-os-x/"
+  status = 301
+
+[[redirects]]
+  from = "/2009/05/mac-os-x-terminal-aliases/"
+  to = "/blog/mac-os-x-terminal-aliases/"
+  status = 301
+
+[[redirects]]
+  from = "/2009/10/haml-javascript/"
+  to = "/blog/haml-javascript/"
+  status = 301
+
+[[redirects]]
+  from = "/2012/12/textmate-how-to-book/"
+  to = "/blog/textmate-how-to-book/"
+  status = 301

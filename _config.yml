@@ -16,12 +16,17 @@ social:
 
 plugins:
   - jekyll-sitemap
+  - jekyll-paginate
 
 # Build settings
 markdown: kramdown
-permalink: /:year/:month/:title/
+permalink: /blog/:title/
 sass:
   style: :compressed
+
+# Pagination settings
+paginate: 5
+paginate_path: "/blog/page-:num/"
 
 defaults:
   -

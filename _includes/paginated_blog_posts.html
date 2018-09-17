@@ -1,0 +1,62 @@
+<section class="bg-white" id="blog-posts">
+  <div class="container mx-auto py-12 px-10">
+    <div class="content">
+      <div class="mb-6">
+        <h2 class="text-4xl">Blog</h2>
+      </div>
+      <div class="mb-6">
+        <ul class="blog-list list-reset">
+          {% for post in paginator.posts %}
+            <li class="blog-post mb-5 leading-normal">
+              <h3 class="text-2xl mb-1">
+                <a href="{{ post.url }}" class="text-black hover:text-grey-darker">
+                  {{ post.title }}
+                </a>
+              </h3>
+              <time class="post-date mb-2 block text-sm text-grey-darker" datetime="{{ post.date }}">
+                {{ post.date | date: "%b %-d, %Y" }}
+              </time>
+              <div class="post-excerpt text-lg">
+                {{ post.excerpt }}
+              </div>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+
+      {% if paginator.total_pages > 1 %}
+      <div class="pagination mb-6">
+        {% if paginator.previous_page %}
+          <a href="{{ paginator.previous_page_path | relative_url }}" class="inline-block mx-1">
+            &laquo; Prev
+          </a>
+        {% else %}
+          <span class="inline-block mx-1">&laquo; Prev</span>
+        {% endif %}
+
+        {% for page in (1..paginator.total_pages) %}
+          {% if page == paginator.page %}
+            <strong class="inline-block mx-1">{{ page }}</strong>
+          {% elsif page == 1 %}
+            <a href="{{ paginator.previous_page_path | relative_url }}" class="inline-block mx-1">
+              {{ page }}
+            </a>
+          {% else %}
+            <a href="{{ site.paginate_path | relative_url | replace: ':num', page }}" class="inline-block mx-1">
+              {{ page }}
+            </a>
+          {% endif %}
+        {% endfor %}
+
+        {% if paginator.next_page %}
+          <a href="{{ paginator.next_page_path | relative_url }}" class="inline-block my-3">
+            Next &raquo;
+          </a>
+        {% else %}
+          <span class="inline-block my-3">Next &raquo;</span>
+        {% endif %}
+      </div>
+      {% endif %}
+    </div>
+  </div>
+</section>

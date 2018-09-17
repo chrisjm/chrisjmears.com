@@ -29,3 +29,16 @@ h1, h2, h3, h4, h5 {
 	background-image: url("/img/svg/rain.svg");
 	background-repeat: repeat;
 }
+
+.post-content a,
+.post-excerpt a {
+	color: #3490dc;
+
+	&:hover {
+		color: #12283a;
+	}
+
+	&:visited {
+		color: #3490dc
+	}
+}
