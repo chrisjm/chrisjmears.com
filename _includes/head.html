@@ -1,3 +1,6 @@
+{%- assign og_image = page.header.teaser | default: site.og_image -%}
+{%- assign og_image = og_image | escape -%}
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,7 +11,7 @@
     <meta property="og:type" content="website">
     <meta property="og:title" content="{{ page.title }}">
     <meta property="og:description" content="{{ site.description }}">
-    <meta property="og:image" content="{{ site.url }}/img/cjm-opengraph.jpg">
+    <meta property="og:image" content="{{ og_image }}">
 
     <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
 

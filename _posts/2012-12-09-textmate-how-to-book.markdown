@@ -3,13 +3,15 @@ layout: post
 title: TextMate How-to Book
 categories:
 - General
-tags: []
+header:
+  teaser: "https://res.cloudinary.com/wanderingleafstudios/image/upload/b_auto,c_pad,g_center,h_630,w_1200/v1537457980/chrisjmears.com/blog/3981OT_TextMateHow-to_cov.png"
+tags: [ self-promotion ]
 comments: []
 ---
 I'm very excited to announce that a book I've written has been published!  The book is called [TextMate How-to](http://www.packtpub.com/textmate-powerfully-versatile-text-and-code-editor/book) and is published by [Packt Publishing](http://www.packtpub.com/).
 
 
-![TextMate How-To Book Cover](/img/3981OT_TextMateHow-to_cov.jpg)
+![TextMate How-To Book Cover](https://res.cloudinary.com/wanderingleafstudios/image/upload/v1537458054/chrisjmears.com/blog/3981OT_TextMateHow-to_cov.png)
 
 
 At just a little over 70 pages, it's a short read geared toward web developers and designers who want to learn about the best features of [TextMate 1.5](http://macromates.com/) without diving too deep into the manual.  It covers the following topics:

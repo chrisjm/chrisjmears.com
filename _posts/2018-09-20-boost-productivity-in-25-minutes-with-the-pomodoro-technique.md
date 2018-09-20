@@ -4,14 +4,15 @@ title: Boost your productivity in 25 minutes with a 🍅
 categories:
 - productivity
 tags: [ gtd, deep-work ]
-comments: []
+header:
+  teaser: "https://res.cloudinary.com/wanderingleafstudios/image/upload/b_auto,c_pad,g_center,h_630,w_1200/v1537457980/chrisjmears.com/blog/pomodoro-timer.jpg"
 ---
 
 Have you ever needed a little extra boost of motivation to get some work done?
 
 For instance, I could *not* convince myself to write this short article. "Only a minimum of 300 words," I tell myself. But, I keep checking my email. Training my dog. Cleaning dishes. Anything to avoid having to sit down and focus for 30 minutes. So, I grab my trusty pomodoro (Italian for "tomato") timer. Yep, I even have one shaped like a tomato for extra fun!
 
-![My tomato Pomodoro timer](/img/blog/pomodoro-timer.jpg)
+![My tomato Pomodoro timer](https://res.cloudinary.com/wanderingleafstudios/image/upload/v1537457980/chrisjmears.com/blog/pomodoro-timer.jpg)
 
 There are different variations of the Pomodoro technique, but this is the method I use: 
 
