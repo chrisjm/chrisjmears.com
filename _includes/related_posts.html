@@ -1,0 +1,24 @@
+{% if site.related_posts != empty %}
+<section class="bg-blue-dark text-white" id="newsletter">
+  <div class="container mx-auto py-12 px-10">
+    <div class="content">
+      <div class="mb-6">
+        <h2 class="text-4xl">Related Posts</h2>
+      </div>
+      <div class="md:mx-auto">
+        <div class="flex md:flex-row flex-col justify-between">
+          {% for post in site.related_posts, limit: 2 %}
+          <div class="flex-1 md:mx-5 md:mb-0 mb-10">
+            <a href="{{ post.url }}" class="text-white text-lg block mb-2 hover:no-underline hover:text-blue-lighter" data-score="{{ post.score }}">
+              <img src="{{post.header.teaser}}" alt="Post teaser image" class="w-full block mb-2">
+              {{ post.title }}
+            </a>
+            <i>{{ post.date | date: "%b %-d, %Y" }}</i>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endif %}
