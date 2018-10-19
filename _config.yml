@@ -14,7 +14,7 @@ social:
   - title: github
     url: https://github.com/chrisjm
 
-og_image: "https://res.cloudinary.com/wanderingleafstudios/image/upload/v1537458385/chrisjmears.com/cjm-opengraph.jpg"
+og_image: "https://res.cloudinary.com/wanderingleafstudios/image/upload/v1537458385/chrisjmears.com/cjm-opengraph-20181019.jpg"
 
 plugins:
   - jekyll-sitemap
