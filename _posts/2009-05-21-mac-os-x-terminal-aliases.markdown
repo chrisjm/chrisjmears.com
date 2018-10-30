@@ -2,7 +2,7 @@
 layout: post
 title: Mac OS X Terminal Aliases
 categories:
-- Tips and Tricks
+- tips and tricks
 tags:
 - osx
 - terminal

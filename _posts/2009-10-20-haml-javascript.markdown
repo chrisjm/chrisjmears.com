@@ -2,7 +2,7 @@
 layout: post
 title: HAML + Javascript
 categories:
-- Tips and Tricks
+- tips and tricks
 tags:
 - haml
 - javascript
