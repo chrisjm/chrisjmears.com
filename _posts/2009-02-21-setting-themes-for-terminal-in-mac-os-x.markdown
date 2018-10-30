@@ -2,7 +2,7 @@
 layout: post
 title: Setting Themes for Terminal in Mac OS X
 categories:
-- Tips and Tricks
+- tips and tricks
 tags:
 - osx
 - terminal

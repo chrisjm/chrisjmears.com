@@ -2,7 +2,7 @@
 layout: post
 title: TextMate How-to Book
 categories:
-- General
+- general
 header:
   teaser: "https://res.cloudinary.com/wanderingleafstudios/image/upload/b_auto,c_pad,g_center,h_630,w_1200/v1537457980/chrisjmears.com/blog/3981OT_TextMateHow-to_cov.png"
 tags: [ self-promotion ]
