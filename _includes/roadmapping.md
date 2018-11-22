@@ -1,5 +1,4 @@
 # The Benefits of My Roadmapping Sessions
-<hr class="star-primary">
 
 Before we begin to work together, we need to understand the project's goals and measurable outcomes. This understanding and goal creation will happen in a Roadmapping Session.
 
@@ -46,9 +45,9 @@ Other than having that block of time set aside, here are a few things you should
 
 ## Let's Get Started!
 
-The price is $1,500.
+The price is $499.
 
-<a href="https://docs.google.com/forms/d/e/1FAIpQLSeYrTHY9GYe6ql80hSIGTYPxxAS2kLbEiu_fmjfZX6fIKLo6w/viewform" class="btn btn-lg btn-primary">Apply for your Roadmapping Session</a>
+[Apply for your Roadmapping Session](https://docs.google.com/forms/d/e/1FAIpQLSeYrTHY9GYe6ql80hSIGTYPxxAS2kLbEiu_fmjfZX6fIKLo6w/viewform)
 
 ### 100% Money-Back Guarantee
 
@@ -88,6 +87,6 @@ Similar to my answer about being nervous about sharing information with me: if I
 ### How much will my project cost? How long will my project take?
 ¯\\\_(ツ)\_/¯ that's what the Roadmapping Session will help determine.
 
-<a href="https://docs.google.com/forms/d/e/1FAIpQLSeYrTHY9GYe6ql80hSIGTYPxxAS2kLbEiu_fmjfZX6fIKLo6w/viewform" class="btn btn-lg btn-primary">Apply for your Roadmapping Session</a>
+[Apply for your Roadmapping Session](https://docs.google.com/forms/d/e/1FAIpQLSeYrTHY9GYe6ql80hSIGTYPxxAS2kLbEiu_fmjfZX6fIKLo6w/viewform)
 
 Have questions? No problem. Shoot me an email at [me@chrisjmears.com](mailto:me@chrisjmears.com)!
