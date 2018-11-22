@@ -1,0 +1,27 @@
+<section class="bg-white" id="blog-posts">
+  <div class="container mx-auto py-12 px-10">
+    <div class="content">
+      <div class="mb-6">
+        <h2 class="text-4xl">Most Recent Articles</h2>
+      </div>
+      <div class="md:mx-auto mb-6">
+        <div class="flex md:flex-row flex-col justify-between">
+          {% for post in site.posts, limit: 2 %}
+          <div class="flex-1 md:mx-5 md:mb-0 mb-10">
+            <a href="{{ post.url }}" class="text-black text-lg block mb-2 no-underline hover:text-blue-dark" data-score="{{ post.score }}">
+              <img src="{{post.header.teaser}}" alt="Post teaser image" class="w-full block mb-2">
+              {{ post.title }}
+            </a>
+            <i>{{ post.date | date: "%b %-d, %Y" }}</i>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+      <div class="mb-6 text-center">
+        <a href="/blog/" class="js-event-track bg-green hover:bg-green-dark text-white font-semibold py-2 px-4 rounded shadow hover:shadow-none border-2 border-green-dark no-underline inline-block text-lg md:text-2xl">
+          See all blog posts
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
