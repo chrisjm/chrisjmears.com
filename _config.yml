@@ -37,3 +37,4 @@ defaults:
       type: posts
     values:
       is_post: true
+      comments: true
