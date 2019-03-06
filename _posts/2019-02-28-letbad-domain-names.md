@@ -28,7 +28,9 @@ Contrary to the name, a top-level domain (TLD) is the last part before the third
 I know it's confusing, which is why this picture is worth a thousand words:
 
 ![Anatomy of a Domain Name diagram](https://res.cloudinary.com/wanderingleafstudios/image/upload/v1551383712/chrisjmears.com/blog/domain-anatomy.png)
-Credit: whatinfo.net
+<div class="text-right text-grey text-sm mb-6">
+  <em>Credit: whatinfo.net</em>
+</div>
 
 Back in the day, there were only a few TLDs. Now you can have your pick (to an extent) depending on how much you want to spend. The fancier the TLD, the more you pay. One thing to note is that not all TLDs are supported by all hosts and services.
 
@@ -51,7 +53,9 @@ Essentially, here’s the conversation:
 Here's another diagram to represent this:
 
 ![How DNS Works diagram](https://res.cloudinary.com/wanderingleafstudios/image/upload/v1551383712/chrisjmears.com/blog/how-dns-works.jpg)
-Credit: stantonstreet.com
+<div class="text-right text-grey text-sm mb-6">
+  <em>Credit: stantonstreet.com</em>
+</div>
 
 ## Where should I buy domain names?
 
