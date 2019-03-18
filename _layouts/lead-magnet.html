@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    {% include head.html %}
+    <body>
+      {% include header.html %}
+
+      <section class="bg-white">
+        <div class="container mx-auto max-w-lg py-12 px-10">
+          <div class="content">
+            <div class="lead-magnet-header mb-5">
+              <h1 class="lead-magnet-title mb-3">{{ page.title }}</h1>
+            </div>
+            <div class="lead-magnet-content mb-12">
+              {{ content }}
+            </div>
+            {% include signature.html %}
+          </div>
+        </div>
+      </section>
+
+      {% include footer.html %}
+      {% include js.html %}
+    </body>
+</html>
